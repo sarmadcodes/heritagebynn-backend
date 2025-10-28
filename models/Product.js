@@ -11,7 +11,7 @@ const productSchema = new mongoose.Schema({
   sizes: [String],
   colors: [String],
   occasion: { type: String, required: true },
-  careInstructions: { type: String, default: '' }, // Allow empty strings
+  careInstructions: { type: String, default: '' }, 
   images: [String],
   isNew: { type: Boolean, default: false },
   isFeatured: { type: Boolean, default: false }
