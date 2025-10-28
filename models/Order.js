@@ -8,14 +8,14 @@ const orderSchema = new mongoose.Schema({
     quantity: { type: Number, required: true },
     selectedSize: { type: String, required: true },
     selectedColor: { type: String, required: true },
-    image: { type: String, required: false }, // Make image optional
+    image: { type: String, required: false },
   }],
   customer: {
-  name: { type: String, required: true },
-  email: { type: String, required: true },
-  phone: { type: String, required: true }, // Add this line
-  address: { type: String, required: true },
-},
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    phone: { type: String, required: true },
+    address: { type: String, required: true },
+  },
   subtotal: { type: Number, required: true },
   shipping: { type: Number, required: true },
   total: { type: Number, required: true },
@@ -26,6 +26,7 @@ const orderSchema = new mongoose.Schema({
     enum: ['Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled'],
     default: 'Pending',
   },
+  paymentScreenshot: { type: String, required: false }, 
   createdAt: { type: Date, default: Date.now },
 });
 
