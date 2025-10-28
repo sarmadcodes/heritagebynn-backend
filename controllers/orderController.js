@@ -9,7 +9,7 @@ exports.getOrders = async (req, res) => {
   }
 };
 
-exports.createOrder = async (req, res) => {  // For frontend checkout (add this to your frontend later)
+exports.createOrder = async (req, res) => {  
   const { customerName, total, status = 'Pending' } = req.body;
   try {
     const order = new Order({ customerName, total, status });
