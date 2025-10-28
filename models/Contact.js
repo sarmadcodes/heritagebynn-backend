@@ -8,7 +8,7 @@ const contactSchema = new mongoose.Schema({
   message: { type: String, required: true },
   appointmentDate: { type: String },
   appointmentTime: { type: String },
-  type: { type: String, default: 'contact' } // 'contact' or 'appointment'
+  type: { type: String, default: 'contact' } 
 }, { timestamps: true });
 
 module.exports = mongoose.model('Contact', contactSchema);
